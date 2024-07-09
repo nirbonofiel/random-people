@@ -1,6 +1,6 @@
 import express, { Express } from "express";
 import cors from "cors";
-import showRouter from './routes/showRouter';
+import showRouter from './controllers/showController';
 
 const bodyParser = require('body-parser');
 
