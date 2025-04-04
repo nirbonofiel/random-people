@@ -1,7 +1,6 @@
 import React from 'react';
 import { Dialog, DialogContent, DialogTitle, Typography } from '@mui/material';
 import { TvShowData } from '../../types/types';
-import parse from 'html-react-parser';
 
 type ShowDetailsProps = {
     open: boolean;
@@ -29,7 +28,7 @@ const ShowDetails: React.FC<ShowDetailsProps> = ({ open, closeModal, show }) => 
                     </Typography>
                 }
                 <Typography sx={{ mt: 2 }}>
-                    {parse(show.summary)}
+                    {show.summary}
                 </Typography>
             </DialogContent>
         </Dialog>
