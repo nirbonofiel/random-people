@@ -1,6 +1,6 @@
 import express, { Express } from "express";
 import cors from "cors";
-import showRouter from './controllers/showController';
+import router from './controllers/peopleController';
 
 const bodyParser = require('body-parser');
 
@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 const BASE_API_ROUTE = '/api'
 
-app.use(BASE_API_ROUTE + '/tvShow',showRouter);
+app.use(BASE_API_ROUTE + '/people',router);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
